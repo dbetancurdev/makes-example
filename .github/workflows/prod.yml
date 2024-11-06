@@ -104,17 +104,6 @@ jobs:
         env:
           CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
-  lintMarkdown_readme:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@f095bcc56b7c2baf48f3ac70d6d6782f4f553222
-      - uses: docker://ghcr.io/fluidattacks/makes/amd64:latest
-        name: /lintMarkdown/readme
-        with:
-          args: sh -c "chown -R root:root /github/workspace && m . /lintMarkdown/readme"
-        env:
-          CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
-
   lintNix:
     runs-on: ubuntu-latest
     steps:

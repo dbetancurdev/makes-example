@@ -1,13 +1,7 @@
-{
-  inputs,
-  makeScript,
-  ...
-}:
+{ inputs, makeScript, ... }:
 makeScript {
   name = "api-deploy";
-  replace = {
-    __argApiCompose__ = ./compose.yaml;
-  };
+  replace = { __argApiCompose__ = ./compose.yaml; };
   searchPaths = {
     bin = [
       inputs.nixpkgs.curl

@@ -1,5 +1,5 @@
-{makePythonEnvironment, ...}:
+{ makePythonEnvironment, ... }:
 makePythonEnvironment {
   pythonProjectDir = ./.;
-  pythonVersion = "3.11";
+  pythonVersion = "3.12";
 }
